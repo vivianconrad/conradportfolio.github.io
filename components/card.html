@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Vi's Portfolio Design System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Homemade+Apple&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../css/globals.css"/>
+    <link rel="stylesheet" href="../css/styleguide.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link href="../css/sidebars.css" rel="stylesheet">
+</head>
+<body>
+
+
+<main class="d-flex flex-nowrap">
+
+    <!-- This determines the width of the sidebar. Change if needed. -->
+    <div class="flex-shrink-0 p-3 bg-white" style="width: 200px;">
+
+        <div class="logo-container">
+            <a href="../index.html"
+               class="d-flex align-items-center text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <img src="../images/V.png" class="logo" alt="primary logo">
+            </a>
+        </div>
+
+        <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                    Foundations
+                </button>
+                <div class="collapse" id="foundations-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="../foundation/type.html"
+                               class="link-dark d-inline-flex text-decoration-none rounded">Typography</a></li>
+                        <li><a href="../foundation/color.html"
+                               class="link-dark d-inline-flex text-decoration-none rounded">Color</a></li>
+                        <li><a href="../foundation/logo.html"
+                               class="link-dark d-inline-flex text-decoration-none rounded">Logo</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="true">
+                    Components
+                </button>
+                <div class="collapse show" id="components-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="navigation.html" class="link-dark d-inline-flex text-decoration-none rounded">Navigation</a>
+                        </li>
+                        <li><a href="card.html" class="link-dark d-inline-flex text-decoration-none rounded">Card</a>
+                        </li>
+                        <li><a href="footer.html"
+                               class="link-dark d-inline-flex text-decoration-none rounded">Footer</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                    Page Patterns
+                </button>
+                <div class="collapse" id="patterns-collapse">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="../patterns/page1.html"
+                               class="link-dark d-inline-flex text-decoration-none rounded">Homepage</a></li>
+                        <li><a href="../patterns/page2.html"
+                               class="link-dark d-inline-flex text-decoration-none rounded">Other Page</a></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="b-example-divider b-example-vr"></div>
+
+    <!-- Page Content  -->
+    <div class="container-fluid overflow-auto">
+        <div class="row p-5">
+            <div class="col-12">
+                <h1>Card</h1>
+                <p>Card components are used to display content in a structured and visually appealing way. They are
+                    versatile and can be used to display a variety of content types, such as images, text, and
+                    links.</p>
+            </div>
+            <div class="row" id="content">
+                <h2>Card Example</h2>
+                <div class="col-lg-6 col-md-10 col-sm-12 mt-3">
+                    <div class="p-3 border fl">
+                        <card class="card gallery-card">
+                            <div class="card-content">
+                                <div class="image">
+                                    <img class="gallery" src="../images/SampleImg.png" alt="sample image"/>
+                                </div>
+                                <div class="title-container pt-2">
+                                    <div class="card-title">Title!</div>
+                                    <div class="card-text">More info!</div>
+                                </div>
+                            </div>
+                        </card>
+                    </div>
+                </div>
+                <!-- end col -->
+
+                <div class="col-12 mt-5">
+                    <h3>Code</h3>
+                    <div class="col code-background ">
+                    <pre class="language-html code-bkg">
+            <code>
+&lt;card class="card gallery-card"&gt;
+    &lt;div class="card-content"&gt;
+        &lt;div class="image"&gt;
+            &lt;img class="gallery" src="../images/SampleImg.png" alt="sample image"/&gt;
+        &lt;/div&gt;
+        &lt;div class="title-container pt-2"&gt;
+            &lt;div class="card-title"&gt;Title!&lt;/div&gt;
+            &lt;div class="card-text"&gt;More info!&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/card&gt;
+            </code>
+          </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+<script src="../js/sidebars.js"></script>
+<script src="../js/prism.js"></script>
+</body>
+</html>
